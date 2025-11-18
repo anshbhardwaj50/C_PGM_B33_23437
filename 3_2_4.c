@@ -1,16 +1,12 @@
 #include <stdio.h>
-
-int main() {
-    float a = 100000;  // a = starting population 
+ int main() {
+    float population = 100000;
     int year;
-
-    printf("Initial population = %.0f\n\n", a);              
-    printf("Year\tPopulation\n");  // \t adds a tab space
-
+    printf("Population growth over the last 10 years:\n\n");
     for (year = 1; year <= 10; year++) {
-        a = a * 1.10;  // increase by 10%
-        printf("%d\t%.0f\n", year, a); // Displays output
+        population = population + (0.10 * population); // increase by 10%
+        printf("Year %d: Population = %.0f\n", year, population);
     }
 
     return 0;
-}
+ }
